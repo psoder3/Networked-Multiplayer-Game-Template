@@ -49,7 +49,7 @@ public class Client extends JComponent implements KeyListener
     private JTextField clientNameField = new JTextField();
     private ColorChooserButton colorChooser;
     private JButton joinGameButton;
-    private int pollingInterval = 10;
+    private int pollingInterval = 10; // milliseconds
     
     private static String HOST = "10.65.0.128"; // This should be the specific ip address 
                                                       // of the computer where the server is running
@@ -63,7 +63,7 @@ public class Client extends JComponent implements KeyListener
         this.frame.setTitle("Networked Game Example");
         this.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.frame.setVisible(true);
-        hostIPField.setText("10.65.0.128");
+        hostIPField.setText(HOST);
         portField.setText("44422");
         this.frame.addKeyListener(this);
         
